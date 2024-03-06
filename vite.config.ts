@@ -10,4 +10,5 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  base: "https://github.com/EastMiddleWest/todo_test_app_April_Tubbs.git",
 })
