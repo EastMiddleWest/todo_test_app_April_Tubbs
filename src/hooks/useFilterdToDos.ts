@@ -18,7 +18,7 @@ const useFilterdToDos = (): HookReturnType => {
   const [filteredToDos, setFilteredToDos] = React.useState(todos)
 
   React.useEffect(() =>{
-    const filterd = todos.filter(todo => {
+    const filtered = todos.filter(todo => {
       switch (filter) {
         case 'Completed': return todo.completed
         case 'Current': return !todo.completed
@@ -26,7 +26,7 @@ const useFilterdToDos = (): HookReturnType => {
         default: return true
       }
     })
-    setFilteredToDos(filterd)
+    setFilteredToDos(filtered)
   },[filter, todos])
 
   return {filter, setFilter, filteredToDos}
